@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body{
+            width: 100vw;
+            height: 100vh;
+        }
+        .user-box{
+            display: flex;
+            border-top: 1px solid #676767;
+            border-bottom: 1px solid #676767;
+            align-items: center;
+            margin: 12px 0;
+            padding: 12px 0;
+            /* display: inline; */
+        }
+        .u-name{
+            /* padding: 12px; */
+            font-size: 24px;
+            margin-left: 9px;
+        }
+        .user-box i{
+            font-size: 26px;
+        }
+        .profile-box i{
+            font-size: 26px;
+            /* display: inline; */
+        }
+        .profile-box{
+            display: flex;
+            flex-direction: column;
+            padding: 12px 20px;
+            width: 160px;
+            border-radius: 20px;
+            position: absolute;
+            top: 110px;
+            box-shadow: 0 .1rem .5rem rgba(0,0,0.1);
+            right: -110rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-box">
+        <div class="user-box">
+            <i class="fa-regular fa-user" style="color: #000000;"></i>
+            <div class="u-name">Username</div>
+        </div>
+        <i class="fa-solid fa-right-from-bracket" style="color: #000000;"></i>
+    </div>
+</body>
+</html>

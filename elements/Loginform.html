@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .overlay {
+            background: rgba(0, 0, 0, 0.7);
+            width: 100vw;
+            height: 100%;
+            z-index: 1000;
+            position: fixed;
+            top: 0;
+            left: 0;
+            display: block;
+        }
+
+        .login-form {
+            height: 100vh;
+            background-color: white;
+            position: absolute;
+            top: 0;
+            right: 110%;
+            width: 40vw;
+            border-left: 2px solid black;
+            padding: 34px;
+            z-index: 1001;
+            height: 100%;
+            /* display: none; */
+        }
+
+
+
+        .logins {
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .signin {
+            width: 100%;
+            height: 100%;
+            display: block;
+        }
+
+        .password-forgot{
+            width: 100%;
+            height: 100%;
+            display: none;
+        }
+
+        .h1 {
+            font-size: 26px;
+            color: black;
+            font-weight: 600;
+            margin: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+        }
+
+        .h1 img {
+            height: 250px;
+            position: absolute;
+            right: 10px;
+            top: 0;
+        }
+
+        .username {
+            font-size: 18px;
+            font-weight: 500;
+            margin-bottom: 16px;
+        }
+
+        .login-form input {
+            margin-bottom: 16px;
+            padding: 10px;
+            width: 40%;
+        }
+
+        .login-form i {
+            font-size: 26px;
+        }
+
+        .login-line {
+            margin-bottom: 18px;
+        }
+
+        .login-line a {
+            margin-right: 19px;
+        }
+
+        .login-line a:hover {
+            text-decoration: underline;
+        }
+
+        .login-btn {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
+        .login-btn button {
+            width: 100px;
+            padding: 12px;
+            background: none;
+            border: 2px solid black;
+            border-radius: 5px;
+        }
+
+        .login-btn button:hover {
+            background: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="overlay">
+        
+    </div>
+
+
+    <div class="login-form">
+        <div class="logins">
+            <i class="fa-regular fa-circle-xmark close-login"></i>
+
+            <div class="toppart h1">
+
+                <div class="login-h1 h1">Login</div>
+                <img src="/grocery-square-high-resolution-logo.png" alt="">
+            </div>
+            <div class="username">Username</div>
+            <input type="text" placeholder="Type your username...">
+            <div class="pass username">Password</div>
+            <input type="text" placeholder="Type your password">
+            <div class="login-line">
+                <a href="#" class="password-frm">Forgot password</a>
+                <a href="#" class="signup signup-frm">Signup</a>
+            </div>
+            <div class="login-btn">
+                <button>Login</button>
+            </div>
+
+        </div>
+
+
+
+
+        
+            <div class="signin">
+                <i class="fa-regular fa-circle-xmark close-login"></i>
+
+                <div class="toppart h1">
+
+                    <div class="login-h1 h1">Signup</div>
+                    <img src="/grocery-square-high-resolution-logo.png" alt="">
+                </div>
+                <div class="username">Email</div>
+                <input type="text">
+                <div class="username">Username</div>
+                <input type="text">
+                <div class="pass username">Password</div>
+                <input type="text">
+                <div class="repeat-pass username">Repeat-Password</div>
+                <input type="text">
+                <div class="login-line">
+                    <a href="#" class="signup login-frm">Login</a>
+                </div>
+                <div class="signup-btn login-btn">
+                    <button>Signup</button>
+                </div>
+            </div>
+
+
+
+
+
+
+
+
+
+
+            <div class="password-forgot">
+                <i class="fa-regular fa-circle-xmark close-login"></i>
+    
+                <div class="toppart h1">
+    
+                    <div class="login-h1 h1">Chainge Password</div>
+                    <img src="/grocery-square-high-resolution-logo.png" alt="">
+                </div>
+                <div class="username">Username</div>
+                <input type="text" placeholder="Type your Username...">
+                <div class="username">Email</div>
+                <input type="text" placeholder="Type your email...">
+                <div class="login-line">
+                    <a href="#" class="login-frm-pass">Try with password</a>
+                </div>
+                <div class="login-btn">
+                    <button>Send Mail</button>
+                </div>
+    
+            </div>
+        
+    </div>
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".test").click(function () {
+                $(".login-form").toggle('active');
+                $(".login-form").css({
+                    right: '0',
+                    transition: '0.4s'
+                });
+                $(".overlay").css({
+                    display: 'block'
+                })
+            })
+            $(".close-login").click(function () {
+                $(".login-form").css({
+                    right: '-110%',
+                    transition: '0.4s'
+                })
+                $(".overlay").css({
+                    display: 'none'
+                })
+            })
+
+
+
+            $(".login-frm").click(function(){
+                $(".signin").css({
+                    display: 'none'
+                })
+                $(".password-forgot").css({
+                    display: 'none'
+                })
+                $(".logins").css({
+                    display: 'block'
+                })
+            })
+
+            $(".signup-frm").click(function(){
+                $(".signin").css({
+                    display: 'block'
+                })
+                $(".password-forgot").css({
+                    display: 'none'
+                })
+                $(".logins").css({
+                    display: 'none'
+                })
+            })
+            $(".login-frm-pass").click(function(){
+                $(".signin").css({
+                    display: 'none'
+                })
+                $(".logins").css({
+                    display: 'block'
+                })
+                $(".password-forgot").css({
+                    display: 'none'
+                })
+            })
+            $(".password-frm").click(function(){
+                $(".signin").css({
+                    display: 'none'
+                })
+                $(".password-forgot").css({
+                    display: 'block'
+                })
+                $(".logins").css({
+                    display: 'none'
+                })
+            })
+        })
+    </script>
+</body>
+
+</html>

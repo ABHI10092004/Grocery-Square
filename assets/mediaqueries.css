@@ -1,0 +1,329 @@
+@media (min-width: 921px) and (max-width: 1085px) {
+    .coupon-box p {
+        font-size: 2.5rem !important;
+        color: var(--black);
+        padding-bottom: 2rem !important;
+        font-weight: 800;
+    }
+
+    .coupons img {
+        width: 24rem !important;
+        height: auto !important;
+        box-shadow: 0 .1rem .5rem rgb(126, 126, 126);
+        margin: 1rem 1.5rem;
+        /* margin: 0 9px; */
+    }
+
+}
+
+@media (max-width: 1002px) {
+    .body {
+        padding: 0 9rem !important;
+        margin-top: 100px;
+    }
+
+}
+
+@media (min-width: 634px) and (max-width: 921px) {
+    .coupon-box p {
+        font-size: 2.3rem !important;
+        color: var(--black);
+        padding-bottom: 2rem !important;
+        font-weight: 800;
+    }
+
+    .coupons img {
+        width: 18rem !important;
+        height: auto !important;
+        box-shadow: 0 .1rem .5rem rgb(126, 126, 126);
+        margin: .4rem 0.8rem !important;
+    }
+}
+
+@media (max-width: 664px) {
+    .banner img {
+        margin: 0 !important;
+    }
+
+    .coupons {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-evenly !important; */
+        margin-bottom: 40px;
+    }
+
+    .coupon-box p {
+        font-size: 2.1rem !important;
+        color: var(--black);
+        padding-bottom: 2rem !important;
+        font-weight: 800;
+    }
+
+    .coupons img {
+        width: 14rem !important;
+        height: auto !important;
+        box-shadow: 0 .1rem .5rem rgb(126, 126, 126);
+        margin: .7rem 0.8rem !important;
+    }
+}
+
+@media (max-width: 560px) {
+    .banner img {
+        margin: 0 !important;
+    }
+
+    .coupons {
+        display: flex;
+        flex-wrap: wrap;
+        /* justify-content: space-evenly !important; */
+        margin-bottom: 40px;
+    }
+
+    .coupon-box p {
+        font-size: 2.1rem !important;
+        color: var(--black);
+        padding-bottom: 2rem !important;
+        font-weight: 800;
+    }
+
+    .coupons img {
+        width: 12rem !important;
+        height: auto !important;
+        box-shadow: 0 .1rem .5rem rgb(126, 126, 126);
+        margin: .7rem 0.8rem !important;
+    }
+}
+
+@media (max-width: 414px) {
+    .banner img {
+        margin: 0 !important;
+    }
+
+    .coupons {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        /* justify-content: space-evenly !important; */
+        margin-bottom: 40px;
+        overflow-x: auto !important;
+    }
+
+    .coupon-box p {
+        font-size: 2.1rem !important;
+        color: var(--black);
+        padding-bottom: 2rem !important;
+        font-weight: 800;
+    }
+
+    .coupons img {
+        width: 12rem !important;
+        height: auto !important;
+        box-shadow: 0 .1rem .5rem rgb(126, 126, 126);
+        margin: .7rem 0.8rem !important;
+    }
+}
+
+
+@media (min-width: 720px) and (max-width: 1111px) {
+    .info-bar span {
+        font-size: 2.1rem !important;
+    }
+
+    .img-hold img {
+        width: 18rem !important;
+        height: auto !important;
+    }
+
+    .img-info {
+        font-size: 2rem !important;
+    }
+
+    .price-bar .disc-price {
+        font-size: 1.8rem !important;
+    }
+
+    .no {
+        font-size: 1.8rem !important;
+    }
+
+    .sendmore button {
+        padding: 1rem 2.3rem !important;
+        font-size: 1.8rem !important;
+    }
+
+    .sendmore div {
+        font-size: 1.8rem !important;
+    }
+
+    .add-btn {
+        font-size: 1.7rem !important;
+    }
+
+    .offer span {
+        font-size: 1.3rem !important;
+    }
+
+    .card .img-hold {
+        margin-bottom: 2.2rem !important;
+    }
+
+    .info-bar a {
+        font-size: 1.2rem !important;
+    }
+
+    .btns div {
+        width: 3rem !important;
+        height: 3rem !important;
+        line-height: 3rem !important;
+    }
+}
+
+@media (min-width: 565px) and (max-width: 720px) {
+    .info-bar{
+        padding-bottom: 1.5rem !important;
+    }
+    .info-bar span {
+        font-size: 2rem !important;
+    }
+
+    .img-hold img {
+        width: 14rem !important;
+        height: auto !important;
+    }
+
+    .img-info {
+        font-size: 2rem !important;
+    }
+
+    .price-bar .disc-price {
+        font-size: 1.8rem !important;
+        
+    }
+    .price-bar .org-price {
+        padding: 0 !important;
+        font-size: 1.6rem !important;
+    }
+
+    .no {
+        font-size: 1.8rem !important;
+    }
+
+    .sendmore button {
+        padding: .9rem 2rem !important;
+        font-size: 1.7rem !important;
+    }
+
+    .sendmore div {
+        font-size: 1.4rem !important;
+    }
+
+    .add-btn {
+        font-size: 1.63rem !important;
+        height: 4.2rem !important;
+    }
+
+    .offer span {
+        font-size: 1.3rem !important;
+    }
+
+    .card .img-hold {
+        margin-bottom: .8rem !important;
+    }
+
+    .info-bar a {
+        font-size: 1.2rem !important;
+    }
+
+    .btns div {
+        width: 3rem !important;
+        height: 3rem !important;
+        line-height: 3rem !important;
+    }
+    .card-content->div{
+        margin: .38rem 0;
+    }
+    .card-slider{
+        padding: 3rem !important;
+    }
+}
+@media (max-width: 565px) {
+    .info-bar{
+        padding-bottom: 1.5rem !important;
+    }
+    .info-bar span {
+        font-size: 1.4rem !important;
+    }
+
+    .img-hold img {
+        width: 11rem !important;
+        height: auto !important;
+    }
+
+    .img-info {
+        font-size: 1.7rem !important;
+    }
+
+    .price-bar .disc-price {
+        font-size: 1.4rem !important;
+        
+    }
+    .price-bar .org-price {
+        padding: 0 !important;
+        font-size: 1.3rem !important;
+    }
+
+    .no {
+        font-size: 1.4rem !important;
+        margin-left: 0.2rem !important;
+    }
+
+    .sendmore button {
+        padding: .7rem 1.6rem !important;
+        font-size: 1.4rem !important;
+    }
+
+    .sendmore div {
+        font-size: 1.4rem !important;
+    }
+
+    .add-btn {
+        font-size: 1.33rem !important;
+        height: 3.1rem !important;
+    }
+
+    .offer span {
+        font-size: 1rem !important;
+    }
+
+    .img-hold .offer{
+        height: 2.7rem !important;
+        width: 6rem !important;
+    }
+
+    .card .img-hold {
+        margin-bottom: .8rem !important;
+        padding: 2rem !important;
+    }
+
+    .info-bar a {
+        font-size: 1rem !important;
+    }
+
+    .btns div {
+        width: 2.4rem !important;
+        height: 2.4rem !important;
+        line-height: 2.4rem !important;
+    }
+    .card-content->div{
+        margin: .38rem 0;
+    }
+    .card-slider{
+        padding: 2.3rem 3rem !important;
+    }
+    .add-cart{
+        height: auto !important;
+    }
+    .body {
+        padding: 0 4rem !important;
+        margin-top: 100px;
+    }
+}

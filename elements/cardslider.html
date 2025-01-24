@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 40px;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+        }
+
+        
+        .card-slider {
+            background-color: #eee;
+            width: 90vw;
+            padding: 24px;
+        }
+        .card-slider .info-bar{
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            padding-bottom: 22px;
+        }
+        .info-bar span{
+            margin-right: auto;
+            font-weight: bold;
+            font-size: 24px;
+            color: #130f40;
+        }
+        .info-bar a{
+            padding: 0 18px;
+            color: gray;
+        }
+        .info-bar .btns{
+            display: flex;
+            margin: 0 ;
+            /* width: 88px; */
+        }
+        .btns div{
+            /* border: 1px solid #130f40; */
+            color: #130f40;
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            margin: 0 2px;
+            background: white;
+            border-radius: 6px;
+        }
+        .btns div:hover{
+            border: 1px solid black;
+        }
+        
+        
+        
+        .card-wrapper {
+            background-color: white;
+        }
+
+
+
+        .card-list {
+            display: grid;
+            gap: 18px;
+            overflow-x: auto;
+            grid-template-columns: repeat(11, 1fr);
+            scrollbar-width: none;
+        }
+        
+        
+        
+        
+        .card {
+            display: flex;
+            flex-direction: column;
+            padding: 12px;
+            background-color: white;
+            border-radius: 12px;
+        }
+        .card div {
+            background-color: white;
+        }
+        .card .img-hold {
+            /* display: flex; */
+            outline: rgb(190, 249, 190) solid 1px;
+            padding: 24px;
+            margin-bottom: 33px;
+            border-radius: 11px;
+            position: relative;
+        }
+        .img-hold .offer{
+            position: absolute;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 24px;
+            width: 60px;
+            top: 0;
+            left: 0;
+            border-top-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            background-color: green;
+            color: white;
+        }
+        .offer span{
+            font-size: 12px;
+            color: white;
+
+        }
+
+        .img-hold img {
+            width: 192px;
+            height: 192px;
+            object-fit: cover;
+        }
+        
+        
+        .card-content {
+            display: flex;
+            flex-direction: column;
+        }
+        .card-content > div {
+            background-color: white;
+            margin: 7px 0;
+        }
+        .add-cart{
+            display: flex;
+            justify-content: center;
+            height: 36px;
+        }
+        .add-btn{
+            width: 155px;
+            background: none;
+            border: 1px solid green;
+            border-radius: 5px;
+            font-size: 15px;
+            font-weight: 500;
+            color: #130f40;
+        }
+        .add-btn:hover{
+            border: 2px solid red;
+        }
+
+        .img-info .qty{
+            width: 100%;
+        }
+        .qty div{
+            font-weight: 600;
+            font-size: 18px;
+            color: #202020;
+        }
+
+        .img-info {
+            /* display: flex; */
+            font-size: 16px;
+            color: #202020;
+        }
+
+        .price-bar {
+            display: flex;
+            margin: 0 !important;
+        }
+        .price-bar .disc-price{
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .price-bar .org-price{
+            margin-left: 4px;
+            text-decoration: line-through;
+            color: #808080;
+            font-size: 13px;
+            padding: 3px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="card-slider">
+        <div class="info-bar">
+            <span>Our Top Sellers</span>
+            <a href="">View All</a>
+            <div class="btns">
+                <div class="fa-solid fa-angle-left" id="left-btn"></div>
+                <div class="fa-solid fa-angle-right" id="right-btn"></div>
+            </div>
+        </div>
+        <div class="cardwrapper">
+            <div class="card-list">
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="/assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="/assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="/" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/catagory vegitables/10000067_23-fresho-capsicum-green.webp" alt="">
+                        <span class="offer">
+                            <span>87% Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info">Capsicum-Organic</div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 18</div>
+                            <span class="org-price">&#8377 32</span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
