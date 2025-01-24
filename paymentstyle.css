@@ -1,0 +1,388 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+        :root {
+            --green: green;
+            --black: #130f40;
+            --light-colour: #666;
+            --box-shadow: 0 .1rem .4rem rgba(0, 0, 0.1);
+            --border: 2rem solid rgba(0, 0, 0.1);
+            --outline: .1rem solid rgba(0, 0, 0.1);
+        }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            transition: all .2s linear;
+            /* color: var(--black); */
+        }
+
+        html {
+            font-size: 64%;
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+            scroll-padding-top: 7rem;
+        }
+
+        body {
+            background: #fff;
+        }
+
+        header {
+            z-index: 3;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1.7rem 22%;
+            box-shadow: var(--box-shadow);
+            background-color: var(--green);
+        }
+
+        .return {
+            font-size: 16px;
+            color: #dddddd;
+        }
+
+        .logo * {
+            font-size: 2rem;
+            color: white;
+        }
+
+        .logo i {
+            margin-right: 3px;
+            font-size: 2.5rem !important;
+
+        }
+
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+
+        label {
+            font-size: 10px !important;
+
+        }
+
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 12.5px;
+            width: 12.5px;
+            background-color: #eee;
+            border: 1px solid #5e5e5e;
+            background: white;
+            border-radius: 3px;
+        }
+
+        .container:hover input~.checkmark {
+            background-color: #ccc;
+        }
+
+        .container input:checked~.checkmark {
+            background-color: #2196F3;
+
+        }
+
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+
+        .container input:checked~.checkmark:after {
+            display: block;
+        }
+
+        .container .checkmark:after {
+            left: 3.5px;
+            top: 1.6px;
+            width: 2px;
+            height: 4px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+
+
+        .body {
+            width: 100vw;
+            /* height: 100vh; */
+            display: flex;
+            justify-content: center;
+        }
+
+
+
+        .body1 {
+            /* border: 2px solid black; */
+            margin: 2px;
+            margin-top: 90px;
+            display: flex !important;
+            flex-direction: column;
+        }
+
+        .body1 * {
+            display: inline-block;
+        }
+
+        .pay-body {
+            width: 100%;
+            border: 2px solid #dddddd;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            padding: 12px 0;
+            width: 350px;
+        }
+
+        .pay-body .heading {
+            font-size: 20px;
+            color: var(--black);
+            font-weight: 600;
+        }
+
+        .infobox {
+            display: flex;
+            flex-direction: column;
+            padding: 20px 0;
+            border: 2px solid #dddddd;
+            border-top: none;
+            border-right: none;
+            border-left: none;
+            margin-bottom: 2px;
+        }
+
+        .inputs {
+            border: 1.7px solid #666;
+            padding: 8px;
+            font-size: 10px;
+            width: 240px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+        }
+
+        .hed {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 18px;
+        }
+
+        .inputhed {
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 2px;
+        }
+
+        .inputs-sp {
+            border: 1.7px solid #666;
+            padding: 8px;
+            font-size: 10px;
+            width: 68px;
+            border-radius: 6px;
+            margin-bottom: 12px;
+            margin-right: 5px;
+        }
+
+        .contact_info {
+            display: flex;
+            flex-direction: column;
+            padding: 18px 0;
+        }
+
+        .paymentbtn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .paymentbtn button {
+            border: 2px solid --black;
+            padding: 12px;
+            font-size: 12px;
+            width: 100%;
+            border-radius: 5px;
+            background: green;
+            color: white;
+        }
+
+
+
+
+
+
+        .cartlst {
+            border: 2px solid #dddddd;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            height: max-content;
+            padding: 12px;
+            border-radius: 8px;
+            box-shadow: 0 .1rem .2rem rgb(201 201 201);
+            margin-left: 10px;
+        }
+
+        .clmcard img {
+            width: 90px;
+            padding: 12px;
+            border-radius: 4px;
+        }
+
+        .clmcard {
+            display: flex;
+            padding: 3px;
+            padding-bottom: 6px;
+            border: 1px solid black;
+            border-style: dashed;
+            border-top: none;
+            border-left: none;
+            border-right: none;
+        }
+
+        .clmcard div {
+            display: flex;
+            width: 90px;
+            height: 90px;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            font-size: 12px;
+        }
+
+        .costinfo {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .costinfo div {
+            font-size: 12px;
+            height: 20px;
+        }
+
+        .item-qty {
+            font-size: 12px !important;
+            color: #808080;
+        }
+
+
+
+        .money {
+            display: flex;
+            flex-direction: column;
+            padding: 12px 0;
+            align-items: center;
+            margin-left: 4px;
+        }
+
+        .itemsub {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+        }
+
+        .itemsub span {
+            font-size: 12px;
+            margin-right: auto;
+        }
+
+        .itemsub div {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .ship {
+            display: flex;
+            justify-content: flex-end;
+            width: 100%;
+            
+            padding-bottom: 6px;
+        }
+
+        .ship span {
+            font-size: 12px;
+            margin-right: auto;
+        }
+
+        .ship div {
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .coupon {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            width: 100%;
+            padding-bottom: 5px;
+        }
+
+        .coupon span {
+            font-size: 12px;
+            margin-Right: auto;
+        }
+
+        .coupon input {
+            font-size: 10px;
+            /* font-weight: 600; */
+            border: 2px solid #7c7c7c;
+            background: none;
+            border-radius: 4px;
+            padding: 5px;
+        }
+        .apply-btn{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-bottom: 5px;
+        }
+        .apply-btn button{
+            border: 1.5px solid black;
+            font-size: 8px;
+            padding: 4px;
+            border-radius: 3px;
+            width: 60px;
+        }
+        .Total{
+            width: 100%;
+            padding-top: 10px;
+            text-align: center;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .main{
+            width: 100%;
+            font-weight: 600;
+            padding-top: 9px;
+            font-size: 18px;
+        }

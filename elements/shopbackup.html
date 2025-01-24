@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<?php
+session_start();
+include ("controllers/db.php");
+
+
+if (isset($_GET['name']) && !empty($_GET['name'])) {
+    $name = $_GET['name'];
+    $rows = mysqli_query($conn, "SELECT * FROM `products` WHERE `category`='$name'");
+
+} else {
+    $rows = mysqli_query($conn, "SELECT * FROM `products` WHERE '1'");
+    $name = "Products";
+}
+?>
+
+
+
+
+
+
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Category Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="elements/productcategory.css">
+</head>
+
+<body>
+    <!--This is Header section-->
+    <header>
+
+
+        <div class="logo">
+            <i class="fa-solid fa-cart-arrow-down"></i>
+            <a href="">GrocerySquare</a>
+        </div>
+
+
+        <nav class="navbar">
+            <a href="index.php">Home</a>
+            <a href="">Features</a>
+            <a href="shop.php">Products</a>
+            <a href="">Catagories</a>
+            <a href="">Reviews</a>
+        </nav>
+
+
+        <div class="icons">
+            <div class="fa-solid fa-bars" id="menu-btn"></div>
+            <div class="fa-solid fa-magnifying-glass" id="search-icon"></div>
+            <div class="fa-solid fa-cart-shopping"></div>
+            <div class="fa-solid fa-user"></div>
+        </div>
+
+
+        <form class="searchbox">
+            <input type="search" id="searchbox" placeholder="Search Here.....">
+            <label for="searchbox" class="fa-solid fa-magnifying-glass"></label>
+        </form>
+
+    </header>
+    <!--This is Header section-->
+
+    <!-- This is body  -->
+    <div class="body">
+
+
+        <div class="filter-opt">
+            <div class="product-cat"><?php echo $name ?></div>
+            <div class="smart-filter">
+                <div class="filter">
+
+                    <img src="assets/imgs/homepage imgs/Screenshot 2024-06-08 100826.png" alt="">
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn">Dropdown</button>
+                    <div class="dropdown-content">
+                        <a href="#">Low to High</a>
+                        <a href="#">High to Low</a>
+                        <a href="#">Rupee Saving</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="cat-products">
+            
+
+            <?php foreach ($rows as $row): ?>
+                <div class="card">
+                    <div class="img-hold">
+                        <img src="assets/imgs/<?php echo $row['image'] ?>" alt="">
+                        <span class="offer">
+                            <span><?php echo $row['offer'] ?>&#x25 Off</span>
+                        </span>
+                    </div>
+                    <div class="card-content">
+                        <div class="img-info"><?php echo $row['name'] ?></div>
+                        <div class="qty">
+                            <div>Per Qty /- 1Kg</div>
+                        </div>
+                        <div class="price-bar">
+                            <div class="disc-price">&#8377 <?php echo $row['discprice'] ?></div>
+                            <span class="org-price">&#8377 <?php echo $row['orgprice'] ?></span>
+                        </div>
+                        <div class="add-cart">
+                            <button class="add-btn">Add</button>
+                        </div>
+                    </div>
+                </div>
+            <?php endforeach ?>
+
+        </div>
+    </div>
+
+    <!-- This is body  -->
+
+
+
+
+    <!-- This is footer -->
+
+    <footer>
+        <div class="main-ftr">
+
+            <div class="small-info">
+                <div class="ftr-logo">
+                    <i class="fa-solid fa-cart-arrow-down"></i>
+                    <div>GrocerySquare</div>
+                </div>
+                <div class="ftr-content">
+                    Feel free to follow us on social media handles all the links are given below
+                </div>
+                <div class="social-logo">
+                    <div class="fa-brands fa-facebook"></div>
+                    <div class="fa-brands fa-square-x-twitter"></div>
+                    <div class="fa-brands fa-square-instagram"></div>
+                    <div class="fa-brands fa-linkedin"></div>
+                </div>
+            </div>
+
+
+
+
+            <div class="contact-info">
+                <div class="contac">Contact-info</div>
+                <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>+123-456-7890</div>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>+11-222-3333</div>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-envelope"></i>
+                    <div>demo1@gmail.com</div>
+                </div>
+                <div class="contact">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <div>Pune, India-400104</div>
+                </div>
+            </div>
+
+
+
+
+            <div class="quick-links">
+                <div class="quick">Quick Links</div>
+                <div class="quicklnk">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div>Home</div>
+                </div>
+                <div class="quicklnk">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div>Products</div>
+                </div>
+                <div class="quicklnk">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div>Catagories</div>
+                </div>
+                <div class="quicklnk">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div>Features</div>
+                </div>
+                <div class="quicklnk">
+                    <i class="fa-solid fa-right-long"></i>
+                    <div>Reviews</div>
+                </div>
+            </div>
+
+
+
+
+            <div class="newsletter">
+                <div class="news">Newsletter</div>
+                <div class="news-cont">Subscribe for latest updates</div>
+                <input type="text" placeholder="Your Email">
+                <div class="sub-btn">
+
+                    <button>Subscribe</button>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+        <div class="sub-ftr">
+            <div class="creator">Created By <span>Shiftwave Technologies</span> | All Rights Reserved</div>
+        </div>
+    </footer>
+
+    <!-- This is footer -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="elements/productcategory.js"></script>
+</body>
+
+</html>
